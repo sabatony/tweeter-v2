@@ -1,0 +1,30 @@
+#tweet-text {
+  max-height: 32px;
+  width: 100%;
+  outline: none;
+  background: none;
+  border: none;
+  border-bottom: 3px solid black
+}
+
+.submit-tweet {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: bungee;
+  padding-top: 16px;
+}
+
+button {
+  background-color: blue;
+  color:azure;
+
+}
+
+button:hover {
+  background-color: #4056a1;
+}
+
+.red-counter {
+  color: red;
+}
