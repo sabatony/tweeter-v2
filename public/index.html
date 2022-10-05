@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <!-- Meta Information -->
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
     <title>Tweeter - Home Page</title>
 
     <!-- External CSS -->
@@ -12,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@1,300;1,600&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
@@ -19,6 +21,8 @@
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
     <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/media-query.css" type="text/css" />
+
 
 
     <!-- External JS -->
@@ -39,19 +43,21 @@
       </div>
     </nav>
 
-    <header>
-      <div>
+    <header class="profile">
+      <div class="avatar">
           <img src="/images/profile-hex.png"> 
       </div>
       <br>
-      <div>
+      <div class="avatar-user">
           <h2>Sabastian Omeasoo</h2>
       </div>
-  </header>
+    </header>
 
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
+        <div id="long-error">❌Too long, please submit a tweet that is less than or equal 140 characters!❌</div>
+        <div id="short-error">❌This tweet is too short please sumbit a valid tweet❌</div>
         <h2>What are you humming about?</h2>
         <form action="/tweets" method="post">
           <label for="tweet-text"></label>
@@ -64,30 +70,7 @@
       </section>
 
       <section class="tweet-container">
-        <article>
-          <header>
-            <div id="avatar">
-              <img src="" alt="">
-              <h3>Newton</h3>
-            </div>
-            <h4 id="username">@username</h4>
-          </header>
-          <main>
-            <p>standing on the shoulders of giants</p>
-          </main>
-          <footer id="tweet-foot">
-            <div class="foot-content">
-            <p>
-              10 days ago
-            </p>
-            <div id="icons">
-              <i class="fa-solid fa-flag"></i>
-              <i class="fa-solid fa-repeat"></i>
-              <i class="fa-solid fa-heart"></i>
-              </div>
-            </div>
-          </footer>
-        </article>
+        
       </section>
     </main>
   </body>

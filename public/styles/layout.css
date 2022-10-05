@@ -25,9 +25,33 @@ body {
   width: 90%;
   align-content: center;
   background-color: #f4f1ec;
-
+  margin: auto;
 }
 
+@media only screen and (min-width:1024px) {
+  body {
+    display: flex;
+  }
+
+  .container {
+    height: 200px;
+    width: 66.7%;
+    float: right;
+  }
+  .new-tweet {
+    margin-right: 50px;
+  }
+  .tweet-container {
+    margin-right: 50px;
+  }
+
+  .profile {
+    margin: 50px;
+    margin-top: 200px;
+    height: auto;
+  }
+
+}
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
